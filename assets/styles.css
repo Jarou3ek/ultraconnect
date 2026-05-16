@@ -339,11 +339,59 @@ footer span {
   font-size: 1.8rem;
 }
 
+.tariff-groups {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.plan-category {
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(34, 211, 238, 0.08), transparent 34%),
+    rgba(2, 6, 23, 0.28);
+}
+
+.category-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.category-heading .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.category-heading h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.category-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  border-radius: 20px;
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--cyan);
+  font-size: 2rem;
+}
+
 .plan-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
+
+.plan-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 
 .plan-card {
   display: flex;
@@ -584,9 +632,10 @@ footer span {
   }
 
   .service-grid,
-  .plan-grid {
+  .plan-grid,
+  .plan-grid.two {
     grid-template-columns: repeat(2, 1fr);
-  }
+}
 
   .documents,
   footer {
@@ -609,11 +658,12 @@ footer span {
 
   .service-grid,
   .plan-grid,
+  .plan-grid.two,
   .faq-grid,
   .documents,
   footer {
     grid-template-columns: 1fr;
-  }
+}
 
   .highlight {
     align-items: stretch;
